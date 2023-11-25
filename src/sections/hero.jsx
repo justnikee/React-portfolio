@@ -125,7 +125,7 @@ const Hero = () => {
           className="fixed top-1/2 left-1/2 text-black text-6xl font-[Liber] translate-x-[-50%] translate-y-[-50%]	"
           ref={text}
         >
-          {counter}
+          {counter}%
         </h2>
       </div>
       <div className="hero_container h-screen">
