@@ -74,7 +74,8 @@ const Hero = () => {
         ease: "power2.inOut",
         delay: 1,
         y: 0,
-      }
+      },
+      "-=1"
     );
 
     timeline.fromTo(
@@ -114,7 +115,7 @@ const Hero = () => {
     <>
       <div
         ref={loadingScreen}
-        className="fixed top-0 left-0 bg-yellow-600 h-full w-full z-[999999]"
+        className="fixed top-0 left-0 bg-yellow-600 h-full w-full z-[999999] hero_main"
       >
         <div
           ref={bar}

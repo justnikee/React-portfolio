@@ -1,32 +1,33 @@
-import React from 'react'
-import logo from '../assets/Assets/icon.png'
+import React, { useRef } from "react";
+import logo from "../assets/Assets/icon.png";
 
-import { useLayoutEffect } from 'react'
-import { gsap } from 'gsap'
-import ScrollTrigger from 'gsap/ScrollTrigger'
-
+import { useLayoutEffect } from "react";
+import { gsap } from "gsap";
 
 const Navbar = () => {
-  gsap.registerPlugin(ScrollTrigger);
-
-  // useLayoutEffect(()=> {
-  //     gsap.to(".animate_header", {
-  //         background: "#f9f9f9",
-  //         color: "#000",
-  //         duration: 2,
-  //         scrollTrigger: {
-  //           trigger: ".animate_header",
-  //           start: "100px top",
-  //           end: "bottom top",
-  //           scrub: 2,
-  //         //   markers: true,
-  //           triggerActions: "restart none reverse none "
-  //         },
-  //       })
-  // }, [])
+  const animateHeader = useRef();
+  useLayoutEffect(() => {
+    gsap.fromTo(
+      animateHeader.current,
+      {
+        height: "0px",
+        opacity: 0,
+      },
+      {
+        height: "100px",
+        duration: 2,
+        ease: "power.out",
+        delay: 4,
+        opacity: 1,
+      }
+    );
+  }, []);
 
   return (
-    <div className="h-[70px] sticky top-0 animate_header z-[9999] bg-[#0E100F]">
+    <div
+      ref={animateHeader}
+      className="h-[70px] sticky top-0 animate_header z-[9999] bg-[#0E100F]"
+    >
       <div className="page_width h-full flex items-center">
         <div className="logo_container flex items-center gap-2 w-[20%]">
           <img height="50" width="50" src={logo} alt="logo" className="logo" />
@@ -56,6 +57,6 @@ const Navbar = () => {
       </div>
     </div>
   );
-}
+};
 
-export default Navbar
+export default Navbar;

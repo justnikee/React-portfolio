@@ -28,7 +28,7 @@ const Projects = () => {
       pin: true,
       animation: tween,
       scrub: true,
-      markers: true, // Enable markers for debugging
+      // markers: true, // Enable markers for debugging
     });
   }, []);
 
