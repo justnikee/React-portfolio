@@ -67,7 +67,11 @@ const About = () => {
     }, []); // <- Closing parenthesis was missing here
 
     return (
-      <div id="about" ref={aboutSection} className="about_section pt-12 pb-12">
+      <div
+        id="about"
+        ref={aboutSection}
+        className="about_section pt-12 pb-12 bg-[#f9f9f9] text-black"
+      >
         <div className="hero_wrapper page_width flex justify-center h-full gap-4">
           <h2 className="text-xl h-screen font-[Liber] w-[40%] sticky top-0 flex justify-center items-center">
             About me
@@ -75,9 +79,9 @@ const About = () => {
           <div className="w-[60%]">
             <div
               ref={itemOne}
-              className="h-screen flex items-end justify-center p-32 "
+              className="flex items-center justify-center h-[400px]"
             >
-              <p className="text-lg ">
+              <p className="text-lg w-[70%]">
                 Hello there! I'm [Your Name], a passionate and creative web
                 developer based in [Your Location]. I have a deep love for
                 coding and a keen eye for design, making the digital world come
@@ -86,12 +90,12 @@ const About = () => {
             </div>
             <div
               ref={itemTwo}
-              className="flex flex-col items-start justify-end p-32"
+              className="flex flex-col items-start justify-center h-[400px]"
             >
-              <h3 className="font-['Liber'] text-l mt-10 mb-4 text-['#02AE96']">
+              <h3 className="font-['Liber'] text-l mt-10 mb-4 text-[#02AE96]">
                 My Journey:
               </h3>
-              <p className="text-lg ">
+              <p className="text-lg w-[70%]">
                 My journey into the world of web development began with a
                 curiosity for how things work on the internet. Over the years,
                 I've honed my skills in front-end and back-end technologies,
@@ -100,10 +104,12 @@ const About = () => {
             </div>
             <div
               ref={itemThree}
-              className="flex flex-col items-start justify-end p-32"
+              className="flex flex-col items-start justify-center h-[400px]"
             >
-              <h3 className="font-['Liber'] text-l mt-10 mb-4">What I Do:</h3>
-              <p className="text-lg ">
+              <h3 className="font-['Liber'] text-l mt-10 mb-4 text-[#02AE96]">
+                What I Do:
+              </h3>
+              <p className="text-lg w-[70%]">
                 I specialize in crafting clean and efficient code to bring ideas
                 to life. From responsive websites to dynamic web applications, I
                 enjoy the process of turning concepts into reality, all while
@@ -112,12 +118,12 @@ const About = () => {
             </div>
             <div
               ref={itemFour}
-              className="flex flex-col items-start justify-center p-32"
+              className="flex flex-col items-start justify-center h-[400px]"
             >
-              <h3 className="font-['Liber'] text-l mt-10 mb-4">
+              <h3 className="font-['Liber'] text-l mt-10 mb-4 text-[#02AE96]">
                 Continuous Learner:
               </h3>
-              <p className="text-lg ">
+              <p className="text-lg w-[70%]">
                 The ever-evolving nature of technology excites me, and I am
                 committed to staying on the cutting edge of industry trends.
                 Learning is a continuous journey, and I embrace the challenge of

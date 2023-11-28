@@ -1,22 +1,7 @@
 import React from "react";
 
 const Skills = () => {
-  return (
-    <div className="grid grid-cols-6">
-      <div className=" border ">icons</div>
-      <div className=" border ">icons</div>
-      <div className=" border ">icons</div>
-      <div className=" border ">icons</div>
-      <div className=" border ">icons</div>
-      <div className=" border ">icons</div>
-      <div className=" border ">icons</div>
-      <div className=" border ">icons</div>
-      <div className=" border ">icons</div>
-      <div className=" border ">icons</div>
-      <div className=" border ">icons</div>
-      <div className=" border ">icons</div>
-    </div>
-  );
+  return <div className="h-screen w-screen"></div>;
 };
 
 export default Skills;

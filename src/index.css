@@ -20,6 +20,10 @@ body{
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
 }
+.hero_container{
+  mix-blend-mode: luminosity;
+}
+
 
 
 .page_width{

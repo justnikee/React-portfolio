@@ -1,10 +1,9 @@
 import React, { useEffect, useLayoutEffect, useState } from "react";
 import { useRef } from "react";
 import { gsap } from "gsap";
-import backgroundInage from "../assets/Assets/main-image.jpg";
+import backgroundInage from "../assets/Assets/imgg.webp";
 
 const Hero = () => {
-
   const [counter, setCounter] = useState(0);
 
   const startLoader = () => {
@@ -94,21 +93,29 @@ const Hero = () => {
       "-=0.5"
     );
 
-    timeline.fromTo(
-      ".anime_last_one span",
-      {
-        autoAlpha: 0,
-        transformOrigin: "left",
-        y: 50,
-      },
-      {
-        autoAlpha: 1,
-        duration: 1,
-        ease: "power2.inOut",
-        y: 0,
-      },
-      "-=0.5"
-    );
+    timeline
+      .fromTo(
+        ".anime_last_one span",
+        {
+          autoAlpha: 0,
+          transformOrigin: "left",
+          y: 50,
+        },
+        {
+          autoAlpha: 1,
+          duration: 1,
+          ease: "power2.inOut",
+          y: 0,
+        },
+        "-=0.5"
+      )
+      .fromTo(
+        backgroundImg.current,
+        {
+          x: 600,
+        },
+        { x: 0, duration: 2, ease: "power2.out" }
+      );
   }, []);
 
   return (
@@ -129,14 +136,19 @@ const Hero = () => {
           {counter}%
         </h2>
       </div>
-      <div className="hero_container h-screen">
+      <div className="hero_container h-screen bg-[#0B0E18]">
         <div className="hero_wrapper page_width flex justify-center flex-col h-full">
           <img
             ref={backgroundImg}
-            className="absolute right-0 top-0 h-full object-cover w-1/2"
             src={backgroundInage}
-            alt="background image"
+            className="absolute right-0 top-0 full"
+            alt=""
           />
+          {/* <Spline
+            className="absolute right-0 top-0 full"
+            scene="https://prod.spline.design/nxYSuepQENH1cK9q/scene.splinecode"
+          /> */}
+
           <h1
             ref={mainText}
             className="text-8xl font-[Anton] font-bold anime_top-text mb-5 overflow-hidden"
